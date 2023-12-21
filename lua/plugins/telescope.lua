@@ -17,7 +17,6 @@ return {
 	config = function(plugin, opts)
 		require('telescope').setup(opts)
 		require('telescope').load_extension('fzf')
-		print(plugin)
 	end,
 
 }

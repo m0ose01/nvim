@@ -28,6 +28,7 @@ local debug = require('dap')
 local debugui = require('dapui')
 
 map('n', '<leader>db', debug.toggle_breakpoint)
+map('n', '<leader>dB', function() debug.set_breakpoint(vim.fn.input('Condition: ')) end)
 map('n', '<leader>dc', debug.continue)
 map('n', '<leader>ds', debug.step_over)
 map('n', '<leader>di', debug.step_into)
