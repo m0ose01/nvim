@@ -39,16 +39,9 @@ require("dapui").setup()
 
 local dap = require("dap")
 
--- dap.configurations = {
--- 	c = {
--- 		{
--- 		type = "c",
--- 		name = "Debug",
--- 		request = "launch",
--- 		program = "${file}",
--- 		}
--- 	},
--- }
+dap.adapters.debugpy = {
+	type = "server",
+}
 
 dap.adapters.lldb = {
 	type = "executable",
@@ -62,20 +55,20 @@ local lldb = {
 	request = 'launch',
 	program = function ()
 		return vim.fn.input(
-		"Path to binary: ",
-		vim.fn.getcwd() .. "/",
-		"file"
+			"Path to binary: ",
+			vim.fn.getcwd() .. "/",
+			"file"
 		)
-		end,
+	end,
 	cwd = "${workspaceFolder}",
 	stopOnEntry = false,
 	args = function ()
-	return {vim.fn.input("Args: ")}
+		return {vim.fn.input("Args: ")}
 	end,
 	runInTerminal = false,
 }
 
-dap.configurations.c = {
-	lldb
+dap.configurations = {
+	c = {lldb},
 }
 
