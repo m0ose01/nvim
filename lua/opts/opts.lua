@@ -2,10 +2,11 @@
 vim.cmd('colorscheme onedark')
 vim.opt.termguicolors = true
 
+-- Set transparency
 
 -- Line numbers
 vim.opt.number = true
---vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Code Folding
 vim.cmd(":set nofoldenable")
