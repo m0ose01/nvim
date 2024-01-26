@@ -38,7 +38,7 @@ local lldb = {
 	args = function ()
 		return {vim.fn.input("Args: ")}
 	end,
-	runInTerminal = false,
+	runInTerminal = true,
 }
 
 dap.configurations = {
