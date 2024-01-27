@@ -1,13 +1,35 @@
 require("mason").setup()
 
---Language Server Protocol Setup
+local cmp = require("cmp")
+cmp.setup {
+	snippet = function(args) require("luasnip").lsp_expand(args.body) end,
+	mapping = cmp.mapping.preset.insert {
+	["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+    ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
+    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+    ["<C-e>"] = cmp.mapping.abort(), -- close completion window
+    ["<CR>"] = cmp.mapping.confirm({ select = false }),
+	},
+	sources = cmp.config.sources {
+		{name = 'nvim_lsp'},
+		{name = "luasnip"},
+		{name = "buffer"},
+		{name = "path"},
+	}
+}
 
+local default_capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+--Language Server Protocol Setup
 require("mason-lspconfig").setup{
-	automatic_installation = false,
+	automatic_installation = true,
 }
 
 require("lspconfig").pyright.setup {}
 require("lspconfig").lua_ls.setup {
+	capabilities = default_capabilities,
 	settings = {
 		Lua = {
 			diagnostics = {
@@ -16,12 +38,21 @@ require("lspconfig").lua_ls.setup {
 		}
 	}
 }
-require("lspconfig").eslint.setup {}
-require("lspconfig").julials.setup {}
-require("lspconfig").r_language_server.setup {}
-require("lspconfig").matlab_ls.setup {}
-require("lspconfig").marksman.setup {}
-require("lspconfig").clangd.setup {}
-
---Custom Commands
-
+require("lspconfig").eslint.setup {
+	capabilities = default_capabilities,
+}
+require("lspconfig").julials.setup {
+	capabilities = default_capabilities,
+}
+require("lspconfig").r_language_server.setup {
+	capabilities = default_capabilities,
+}
+require("lspconfig").matlab_ls.setup {
+	capabilities = default_capabilities,
+}
+require("lspconfig").marksman.setup {
+	capabilities = default_capabilities,
+}
+require("lspconfig").clangd.setup {
+	capabilities = default_capabilities,
+}
