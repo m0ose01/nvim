@@ -56,3 +56,6 @@ require("lspconfig").marksman.setup {
 require("lspconfig").clangd.setup {
 	capabilities = default_capabilities,
 }
+require("lspconfig").rust_analyzer.setup {
+	capabilities = default_capabilities,
+}

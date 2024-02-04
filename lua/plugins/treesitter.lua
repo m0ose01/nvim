@@ -3,7 +3,7 @@ return {
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
-				"c", "lua", "python", "r", "julia", "matlab", "markdown", "markdown_inline", "html", "css", "javascript"
+				"c", "lua", "python", "r", "julia", "matlab", "markdown", "markdown_inline", "html", "css", "javascript", "rust",
 			},
 			highlight = {enable = true},
 			indent = {enable = true}
