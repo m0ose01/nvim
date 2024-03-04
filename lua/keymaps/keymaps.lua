@@ -13,8 +13,7 @@ end
 -- General shortcuts
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
-
---map('n', '<leader>e', ':Ex<Cr>')
+map("n", "<C-c>", "<esc>")
 
 -- Toggle plugins
 map('n', '<leader>e', ':NvimTreeToggle<Cr>')
