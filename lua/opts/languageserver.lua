@@ -59,3 +59,6 @@ require("lspconfig").clangd.setup {
 require("lspconfig").rust_analyzer.setup {
 	capabilities = default_capabilities,
 }
+require("lspconfig").html.setup {
+	capabilities = default_capabilities,
+}
