@@ -18,3 +18,7 @@ vim.opt.tabstop = 4
 -- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- Spell check
+vim.opt.spelllang = 'en_gb'
+vim.opt.spell = true
