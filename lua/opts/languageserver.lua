@@ -2,7 +2,11 @@ require("mason").setup()
 
 local cmp = require("cmp")
 cmp.setup {
-	snippet = function(args) require("luasnip").lsp_expand(args.body) end,
+	snippet = {
+		expand = function(args)
+			require("luasnip").lsp_expand(args.body)
+		end,
+	},
 	mapping = cmp.mapping.preset.insert {
 	["<s-tab>"] = cmp.mapping.select_prev_item(),
     ["<tab>"] = cmp.mapping.select_next_item(),
