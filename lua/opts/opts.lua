@@ -22,3 +22,11 @@ vim.opt.smartcase = true
 -- Spell check
 vim.opt.spelllang = 'en_gb'
 vim.opt.spell = true
+
+vim.opt.showmode = false
+
+-- Save undo history
+vim.opt.undofile = true
+
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
