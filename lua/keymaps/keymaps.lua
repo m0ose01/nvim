@@ -16,7 +16,6 @@ map("v", "K", ":m '<-2<CR>gv=gv")
 map("n", "<C-c>", "<esc>")
 
 -- Toggle plugins
-map('n', '<leader>e', ':NvimTreeToggle<Cr>')
 
 map('t', '<esc><esc>', '<C-\\><C-n>')
 
