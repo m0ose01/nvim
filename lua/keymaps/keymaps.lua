@@ -59,3 +59,9 @@ function ZoteroCite()
 
 map('i', '<A-z>', ZoteroCite)
 map('n', '<leader>zz', ZoteroCite)
+
+-- Iron nvim shortcuts
+local iron = require("iron.core")
+map('n', '<leader>jj', '<cmd>IronRepl<CR>')
+map('n', '<C-M>', iron.send_line)
+map('v', '<C-M>', iron.visual_send)
