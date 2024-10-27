@@ -5,6 +5,11 @@ return {
 			config = {
 				scratch_repl = false,
 				repl_open_cmd = require("iron.view").split.bot("20%"),
+				repl_definition = {
+					matlab = {
+						command = { "matlab", "-nosplash", "-nodesktop" },
+					}
+				}
 			},
 		}
 	end,
