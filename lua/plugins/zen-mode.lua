@@ -1,4 +1,5 @@
 return {
 	"folke/zen-mode.nvim",
-	opts = { }
+	opts = { },
+	ft = {"markdown", "md", "qmd", "Rmd", "txt"},
 }

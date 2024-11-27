@@ -17,6 +17,14 @@ return {
 	config = function(plugin, opts)
 		require('telescope').setup(opts)
 		require('telescope').load_extension('fzf')
+		-- Telescope Shortcuts
+		local telescope = require('telescope.builtin')
+		Map('n', '<leader>ff', telescope.find_files, {})
+		Map('n', '<leader>FF', telescope.git_files, {})
+		Map('n', '<leader>fg', telescope.live_grep, {})
+		Map('v', '<leader>fg', telescope.grep_string, {})
+		Map('n', '<leader>fb', telescope.buffers, {})
+		Map('n', '<leader>fh', telescope.help_tags, {})
 	end,
 
 }
