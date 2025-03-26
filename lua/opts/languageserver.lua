@@ -31,7 +31,7 @@ require("mason-lspconfig").setup{
 	automatic_installation = true,
 }
 
-require("lspconfig").pyright.setup {}
+require("lspconfig").basedpyright.setup {}
 require("lspconfig").lua_ls.setup {
 	capabilities = default_capabilities,
 	settings = {
