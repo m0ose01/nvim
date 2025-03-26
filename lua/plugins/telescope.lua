@@ -20,11 +20,16 @@ return {
 		-- Telescope Shortcuts
 		local telescope = require('telescope.builtin')
 		Map('n', '<leader>ff', telescope.find_files, {})
-		Map('n', '<leader>FF', telescope.git_files, {})
+		Map('n', '<leader>fF', telescope.git_files, {})
 		Map('n', '<leader>fg', telescope.live_grep, {})
 		Map('v', '<leader>fg', telescope.grep_string, {})
 		Map('n', '<leader>fb', telescope.buffers, {})
 		Map('n', '<leader>fh', telescope.help_tags, {})
+		Map('n', '<leader>fr', telescope.lsp_references, {})
+		Map('n', '<leader>fs', telescope.grep_string, {})
+		Map('n', '<leader>fS', telescope.lsp_document_symbols, {})
+		Map('n', '<leader>fG', telescope.git_commits, {})
+		Map('n', '<leader>fp', telescope.builtin, {})
 	end,
 
 }
