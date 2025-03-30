@@ -72,16 +72,6 @@ require("lspconfig").html.setup {
 Map('n', '<leader>gd', vim.lsp.buf.definition)
 Map('n', '<leader>gD', vim.lsp.buf.declaration)
 Map('n', '<leader>r', vim.lsp.buf.rename)
--- Debug Shortcuts
-local debug = require('dap')
-local debugui = require('dapui')
-Map('n', '<leader>db', debug.toggle_breakpoint)
-Map('n', '<leader>dB', function() debug.set_breakpoint(vim.fn.input('Condition: ')) end)
-Map('n', '<leader>dc', debug.continue)
-Map('n', '<leader>ds', debug.step_over)
-Map('n', '<leader>di', debug.step_into)
-Map('n', '<leader>do', debug.step_out)
-Map('n', '<leader>dd', debugui.toggle)
 -- Telescope Shortcuts
 local telescope = require('telescope.builtin')
 Map('n', '<leader>ff', telescope.find_files, {})
