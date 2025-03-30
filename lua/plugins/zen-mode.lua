@@ -44,8 +44,5 @@ return {
 			vim.cmd.colorscheme("onedark")
 		end,
 	},
-	init = function()
-		Map('n', '<leader>zm', require("zen-mode").toggle)
-	end,
 	ft = {"markdown", "md", "qmd", "Rmd", "txt"},
 }
