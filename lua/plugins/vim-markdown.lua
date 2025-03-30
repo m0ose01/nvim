@@ -7,5 +7,5 @@ return {
 			vim.g.vim_markdown_frontmatter = 1
 		end
 	},
-	ft = {"md", "markdown", "qmd", "Rmd"},
+	ft = {"md", "markdown", "quarto", "Rmd"},
 }

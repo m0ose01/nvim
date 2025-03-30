@@ -4,4 +4,5 @@ return {
 		"jmbuhr/otter.nvim",
 		"nvim-treesitter/nvim-treesitter",
 	},
+	ft = "quarto",
 }

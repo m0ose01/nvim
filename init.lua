@@ -10,6 +10,12 @@ function Map(mode, lhs, rhs, opts)
     vim.keymap.set(mode, lhs, rhs, options)
 end
 
+vim.filetype.add({
+	extension = {
+		quarto = "qmd"
+	}
+})
+
 require("lazy-config")
 require("opts")
 require("keymaps")

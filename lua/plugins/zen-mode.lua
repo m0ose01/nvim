@@ -44,5 +44,5 @@ return {
 			vim.cmd.colorscheme("onedark")
 		end,
 	},
-	ft = {"markdown", "md", "qmd", "Rmd", "txt"},
+	ft = {"markdown", "md", "quarto", "Rmd", "txt"},
 }
