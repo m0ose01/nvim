@@ -18,5 +18,5 @@ return {
 		Map('n', '<C-j>', iron.send_line)
 		Map('v', '<C-j>', iron.visual_send)
 	end,
-	ft = {"R", "julia", "matlab", "python", "javascript"},
+	ft = {"R", "julia", "matlab", "python", "javascript", "quarto"},
 }

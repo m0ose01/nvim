@@ -5,4 +5,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 	},
 	ft = "quarto",
+	opts = {
+		codeRunner = {default_method = "iron"}
+	}
 }
