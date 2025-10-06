@@ -1,10 +1,21 @@
 return {
-	"williamboman/mason.nvim",
+	"mason-org/mason-lspconfig.nvim",
 	opts = {
-	ensure_installed = {}
+		ensure_installed = {
+			"basedpyright",
+			"clangd",
+			"eslint",
+			"html",
+			"julials",
+			"lua_ls",
+			"r_language_server",
+			"matlab_ls",
+			"marksman",
+			"rust_analyzer",
+		}
 	},
 	dependencies = {
-		"williamboman/mason-lspconfig"
+		{ "mason-org/mason.nvim", opts = {} },
+		"neovim/nvim-lspconfig",
 	},
-	automatic_installation = true,
 }
