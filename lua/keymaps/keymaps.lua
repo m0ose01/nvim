@@ -21,3 +21,11 @@ function ZoteroCite()
 Map('i', '<A-z>', ZoteroCite)
 Map('n', '<leader>zz', ZoteroCite)
 
+
+Map('n', '<leader>gk',
+	function()
+		local new_lines_config = not vim.diagnostic.config().virtual_lines
+		local new_text_config = not vim.diagnostic.config().virtual_text
+		vim.diagnostic.config({ virtual_lines = new_lines_config, virtual_text = new_text_config })
+	end
+)
