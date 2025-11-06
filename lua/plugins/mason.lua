@@ -6,7 +6,7 @@ return {
 			"clangd",
 			"eslint",
 			"html",
-			"julials",
+			-- "julials",
 			"lua_ls",
 			"r_language_server",
 			"matlab_ls",
