@@ -1,5 +1,5 @@
 -- Set background colour
-vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme rose-pine-moon')
 vim.opt.termguicolors = true
 
 -- Set transparency
