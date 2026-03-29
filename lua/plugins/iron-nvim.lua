@@ -14,9 +14,14 @@ return {
 			},
 		}
 		-- Iron nvim shortcuts
-		Map('n', '<leader>jj', '<cmd>IronRepl<CR>')
-		Map('n', '<C-j>', iron.send_line)
-		Map('v', '<C-j>', iron.visual_send)
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = {"R", "julia", "matlab", "python", "javascript"},
+			callback = function()
+				Map('n', '<leader>jj', '<cmd>IronRepl<CR>')
+				Map('n', '<C-j>', iron.send_line)
+				Map('v', '<C-j>', iron.visual_send)
+			end
+		})
 	end,
 	ft = {"R", "julia", "matlab", "python", "javascript", "quarto"},
 }
