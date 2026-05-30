@@ -5,3 +5,10 @@ Map('n', '<leader>r', vim.lsp.buf.rename)
 
 -- N.B. also had to install LanguageServer.jl, SymbolServer.jl and StaticLint.jl in the shared environment '@nvim-lspconfig'
 vim.lsp.enable("julials")
+vim.lsp.config("clangd", {
+	cmd = {
+		"clangd",
+		"--header-insertion=never"
+	}
+}
+)
