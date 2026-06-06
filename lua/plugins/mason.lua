@@ -5,6 +5,7 @@ return {
 			"basedpyright",
 			"clangd",
 			"eslint",
+			"harper_ls",
 			"html",
 			-- "julials",
 			"lua_ls",

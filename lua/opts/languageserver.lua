@@ -12,3 +12,6 @@ vim.lsp.config("clangd", {
 	}
 }
 )
+vim.lsp.config("harper_ls", {
+	filetypes={"quarto"},
+})
